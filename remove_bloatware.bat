@@ -64,3 +64,5 @@ winget uninstall Microsoft.YourPhone_8wekyb3d8bbwe
 winget uninstall Microsoft.ZuneMusic_8wekyb3d8bbwe
 winget uninstall Microsoft.ZuneVideo_8wekyb3d8bbwe
 winget uninstall microsoft.windowscommunicationsapps_8wekyb3d8bbwe
+
+pause
