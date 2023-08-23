@@ -30,13 +30,33 @@ if '%errorlevel%' NEQ '0' (
 :--------------------------------------
 taskkill /F /IM msedge.exe
 
-takeown /f C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe /r /d y
-icacls C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe /grant %username%:F /t /q
+takeown /f "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe" /r /d y
+icacls "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe" /grant %username%:F /t /q
 
-takeown /f C:\Windows\SystemApps\Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe /r /d y
-icacls C:\Windows\SystemApps\Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe /grant %username%:F /t /q
+takeown /f "C:\Windows\SystemApps\Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe" /r /d y
+icacls "C:\Windows\SystemApps\Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe" /grant %username%:F /t /q
 
-rmdir /s /q C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe
-rmdir /s /q C:\Windows\SystemApps\Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe
+takeown /f "C:\Program Files (x86)\Microsoft\Edge" /r /d y
+icacls "C:\Program Files (x86)\Microsoft\Edge" /grant %username%:F /t /q
+
+takeown /f "C:\Program Files (x86)\Microsoft\EdgeCore" /r /d y
+icacls "C:\Program Files (x86)\Microsoft\EdgeCore" /grant %username%:F /t /q
+
+takeown /f "C:\Program Files (x86)\Microsoft\EdgeUpdate" /r /d y
+icacls "C:\Program Files (x86)\Microsoft\EdgeUpdate" /grant %username%:F /t /q
+
+takeown /f "C:\Program Files (x86)\Microsoft\EdgeWebView" /r /d y
+icacls "C:\Program Files (x86)\Microsoft\EdgeWebView" /grant %username%:F /t /q
+
+takeown /f "C:\Program Files (x86)\Microsoft\Temp" /r /d y
+icacls "C:\Program Files (x86)\Microsoft\Temp" /grant %username%:F /t /q
+
+rmdir /s /q "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe"
+rmdir /s /q "C:\Windows\SystemApps\Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe"
+rmdir /s /q "C:\Program Files (x86)\Microsoft\Edge"
+rmdir /s /q "C:\Program Files (x86)\Microsoft\EdgeCore"
+rmdir /s /q "C:\Program Files (x86)\Microsoft\EdgeUpdate"
+rmdir /s /q "C:\Program Files (x86)\Microsoft\EdgeWebView"
+rmdir /s /q "C:\Program Files (x86)\Microsoft\Temp"
 
 pause
