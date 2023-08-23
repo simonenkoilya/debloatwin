@@ -32,3 +32,5 @@ winget uninstall Microsoft.StorePurchaseApp_8wekyb3d8bbwe
 winget uninstall Microsoft.WindowsStore_8wekyb3d8bbwe
 winget uninstall Microsoft.Winget.Source_8wekyb3d8bbwe
 winget uninstall Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+
+pause
